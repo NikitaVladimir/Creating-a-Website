@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bellefair&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
 
 
 :root{
@@ -27,19 +27,19 @@ body{
 
 .nav-container{
   position: relative;
-  height: 90px;
+  height: 80px;
   width: 100%;
-  padding: 0 20%;
+  padding: 0 5%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #005;
-  font-family: 'Bellefair', serif;
+  font-family: 'Italiana', serif;
 }
 
 .logo{
   font-weight: 600;
-  font-size: 46px;
+  font-size: 42px;
   text-decoration: none;
   color: var(--primary-font-color);
 }
@@ -58,6 +58,7 @@ nav ul li{
 
 nav ul li a{
   text-decoration: none;
-  font-size: 18px;
+  font-size: 25px;
+  font-family: 'Italiana', serif;
   color: var(--primary-font-color);
 }
