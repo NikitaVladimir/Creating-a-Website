@@ -1,7 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
 
+@font-face{
+  font-family: Garamond;
+  src: url(/fonts/garamond.ttf);
+}
 
 :root{
   --primary-font-color: #f5ecb2;
@@ -59,6 +61,6 @@ nav ul li{
 nav ul li a{
   text-decoration: none;
   font-size: 25px;
-  font-family: 'Italiana', serif;
+  font-family: 'Garamond', serif;
   color: var(--primary-font-color);
 }
