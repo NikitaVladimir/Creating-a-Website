@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&display=swap');
+
+
 :root{
   --primary-font-color: #f5ecb2;
   --secondary-font-color: #f1b495;
@@ -31,14 +34,14 @@ body{
   justify-content: space-between;
   align-items: center;
   background-color: #005;
-  font-family: "Bebas Neue", sans-serif;
+  font-family: 'Bellefair', serif;
 }
 
 .logo{
   font-weight: 600;
   font-size: 46px;
   text-decoration: none;
-  color: #E4B7A0;
+  color: var(--primary-font-color);
 }
 
 nav ul{
