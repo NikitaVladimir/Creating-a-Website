@@ -1,10 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
 
-@font-face{
-  font-family: Garamond;
-  src: url(/fonts/garamond.ttf);
-}
-
 :root{
   --primary-font-color: #f5ecb2;
   --secondary-font-color: #f1b495;
@@ -17,17 +12,29 @@
 }
 
 body{
-  height: 100%;
-  width: 100%;
-  background-color: #006;
   overflow: hidden;
 }
 
-.black{
-  color: black;
+header{
+  min-height: 100vh;
+  width: 100%;
+
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0, 0, 0, 0.5)), url(red-painting.jpg);
+  background-size: 100vw 100vh;
+  background-repeat: no-repeat;
+  background-position: center center;
+
 }
 
-.nav-container{
+@media only screen and (max-width: 1080px){
+  header{
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0, 0, 0, 0.5)), url(red-painting.jpg);
+    background-size: 1080px 100vh;
+    background-repeat: no-repeat;
+  }
+}
+
+nav{
   position: relative;
   height: 80px;
   width: 100%;
@@ -35,15 +42,14 @@ body{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #005;
   font-family: 'Italiana', serif;
 }
 
 .logo{
   font-weight: 600;
-  font-size: 42px;
-  text-decoration: none;
+  font-size: 25px;
   color: var(--primary-font-color);
+  text-decoration: none;
 }
 
 nav ul{
@@ -54,13 +60,14 @@ nav ul{
   margin-left: 60px;
 }
 
-nav ul li{
+nav ul > * + *{ /* all adjacent siblings selector*/
   padding-left: 50px;
 }
 
 nav ul li a{
   text-decoration: none;
-  font-size: 25px;
+  font-size: 16px;
   font-family: 'Garamond', serif;
+  font-weight: bold;
   color: var(--primary-font-color);
 }
