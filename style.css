@@ -1,37 +1,54 @@
 @import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
 
 :root{
-  --primary-font-color: #f5ecb2;
-  --secondary-font-color: #f1b495;
+  --primary-font-color: #fff2a0;
+  --secondary-font-color: #f8f1ed;
 }
 
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
 }
 
+*:before,
+*:after{
+   -webkit-box-sizing: border-box;
+}
 
 body{
   overflow: hidden;
+}
+
+h1,h2,h3,h4,h5,h6{
+  color: var(--primary-font-color);
+  font-size: 1.6em;
+}
+
+p{
+  color: var(--secondary-font-color);
+  font-size: 1em;
+}
+
+a{
+  font-size: 1em;
+}
+
+a:hover{
+  text-decoration: underline;
+  text-decoration-color: var(--primary-font-color);
+  text-decoration-thickness: 0.2em;
 }
 
 header{
   min-height: 100vh;
   width: 100%;
 
-  background: linear-gradient(rgba(0,0,0,0.5),
-  rgba(0, 0, 0, 0.5)), url(milano-gallery.jpg) no-repeat center center fixed;
+  background: linear-gradient(rgba(0,0,0,0.7),
+  rgba(0, 0, 0, 0.7)), url(milano-gallery.jpg) no-repeat center center fixed;
   background-size: cover;
-
 }
-
-@media only screen and (max-width: 1080px){
-  header{
-
-  }
-}
-
 
 nav{
   
@@ -54,6 +71,10 @@ nav{
   color: var(--primary-font-color);
 }
 
+.logo:hover{
+  text-decoration: none;
+}
+
 nav ul{
 
   margin-left: 60px;
@@ -74,4 +95,11 @@ nav ul li a{
   font-weight: bold;
 
   color: var(--primary-font-color);
+}
+
+.container{
+
+}
+
+.container > *{
 }
