@@ -22,6 +22,7 @@ h1,h2,h3,h4,h5,h6{
 }
 
 p{
+  line-height: 1.4em;
   color: var(--secondary-font-color);
   font-size: 1em;
 }
@@ -39,14 +40,12 @@ a:hover{
 header{
   min-height: 100vh;
   width: 100%;
-
   background: linear-gradient(rgba(0, 0, 0, 0.8),
   rgba(0, 0, 0, 0.8)), url(milano-gallery.jpg) no-repeat center center fixed;
   background-size: cover;
 }
 
 nav{
-  
   height: 100px;
   width: 70%;
   margin: auto;
@@ -62,7 +61,6 @@ nav{
   font-weight: 600;
   font-size: 25px;
   text-decoration: none;
-
   color: var(--primary-font-color);
 }
 
@@ -88,8 +86,12 @@ nav ul li a{
   font-size: 16px;
   font-family: 'Garamond', serif;
   font-weight: bold;
-
   color: var(--primary-font-color);
+}
+
+.main-container{
+  height: calc(100vh - 200px);
+  display: flex;
 }
 
 /* Align all items to center center */
@@ -97,36 +99,50 @@ nav ul li a{
   display: flex;
   text-align: center;
   align-items: center;
-  width: 80%;
-  margin: 0 auto;
+  width: 70%;
+  margin: 0px auto;
 }
 
 /* All rows are equal */
 .container > *{
-  padding: 20px;
   flex-basis: 100%;
 }
 
 /* Aligns the 1st row's text to the left */
 .container .side-1{
-  text-align: left;
+  text-align: left; 
+}
+
+.container .side-1 p, h1 {
+  padding: 5px 25px 5px 0px;
 }
 
 /* Size the image in the 2nd row */
 .side-2 img{
   max-width: 100%;
   min-width: 100%;
+  max-height: 100%;
+  min-height: 100%;
 }
 
 /* Mobile Responsive Container */
 @media screen and (max-width: 768px){
+  nav{
+    width: 90%;
+  }
+  
+  .main-container{
+    height: auto;
+  }
+  
   .container{
     flex-direction: column;
-    width: auto;
+    width: 90%;
+    margin: 0px auto;
   }
 
   .container > *{
-    padding: 2em;
+    padding: 15px 0px;
     flex-basis: 100%;
   }
 }
