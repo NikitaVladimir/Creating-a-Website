@@ -3,17 +3,15 @@
 :root{
   --primary-font-color: #fff2a0;
   --secondary-font-color: #f8f1ed;
+  --navbar-height: 125px;
+  --containerwidth-width: 70%;
+  --mobilecontainerwidth-width: 90%;
 }
 
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  text-decoration: none;
-}
-
-body{
-  overflow: hidden;
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -47,20 +45,18 @@ header{
 }
 
 nav{
-  height: 100px;
-  width: 70%;
+  height: var(--navbar-height);
+  width: var(--containerwidth-width);
   margin: auto;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   font-family: 'Italiana', serif;
 }
 
 .logo{
-  font-weight: 600;
-  font-size: 25px;
+  font-weight: bold;
+  font-size: 1.6em;
   text-decoration: none;
   color: var(--primary-font-color);
 }
@@ -70,8 +66,6 @@ nav{
 }
 
 nav ul{
-
-  margin-left: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -84,63 +78,151 @@ nav ul > * + *{ /* all adjacent siblings selector*/
 
 nav ul li a{
   text-decoration: none;
-  font-size: 16px;
+  font-size: 20px;
   font-family: 'Garamond', serif;
   font-weight: bold;
   color: var(--primary-font-color);
 }
 
 .main-container{
-  height: calc(100vh - 200px);
   display: flex;
+  height: calc(100vh - var(--navbar-height)*2);
 }
 
 /* Align all items to center center */
-.container{
+.child-container{
   display: flex;
   text-align: center;
   align-items: center;
-  width: 70%;
+  width: var(--containerwidth-width);
   margin: 0px auto;
 }
 
 /* All rows are equal */
-.container > *{
+.child-container > *{
   flex-basis: 100%;
 }
 
 /* Aligns the 1st row's text to the left */
-.container .side-1{
-  text-align: left; 
+.child-container .side-1{
+  text-align: left;
 }
 
-.container .side-1 p, h1 {
-  padding: 5px 25px 5px 0px;
+.child-container .side-1 .date{
+  font-size: 1.3em;
+  text-transform: uppercase;
+}
+
+.date{
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 100;
+  display: flex;
+  align-items: flex-start;
+}
+
+/* Add padding to header and paragraph */
+.child-container .side-1 > *{
+  padding: 5px 30px 5px 0px;
 }
 
 /* Size the image in the 2nd row */
-.side-2 img{
-  max-width: calc(100% - 1.5em);
+.child-container .side-2 img{
+  max-width: 100%;
+  padding: 0px 0px 0px 30px;
+  margin: auto;
 }
 
 /* Mobile Responsive Container */
 @media screen and (max-width: 768px){
   nav{
-    width: 90%;
+    width: var(--mobilecontainerwidth-width);
   }
   
   .main-container{
     height: auto;
   }
   
-  .container{
-    flex-direction: column;
-    width: 90%;
+  .child-container{
+    flex-direction: column-reverse;
+    width: var(--mobilecontainerwidth-width);
     margin: 0px auto;
   }
 
-  .container > *{
-    padding: 15px 0px;
+  .child-container > *{
+    padding: 0.25em 0px 0.5em 0px;
     flex-basis: 100%;
   }
+
+  .child-container .side-1 .date{
+    padding-top: 1em;
+  }
+
+  .child-container .side-1 h1{
+    padding: 0.25em 5px 0.5em 0px;
+  }
+
+  .child-container .side-2 img{
+    max-width: 100%;
+    padding: 0px;
+    width: 100%;
+  }
+}
+
+
+
+
+/* BODY SECTION */
+
+.body-section{
+  font-size: 16px;
+  background-color: darkslategray;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+}
+
+.body-section .container{
+  width: var(--containerwidth-width);
+  margin: auto;
+  background-color: red;
+  display: flex;
+}
+
+.body-section .container > *{
+/*  padding: 2em; */
+  flex-basis: 100%;
+  padding: 2em 2em;
+}
+
+/* Content with space between elements */
+.body-section .container .side-1 {
+  background-color:blue;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+
+/* Content with elements in the middle */
+.body-section .container .side-2 {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: green;
+  align-content: center;
+}
+
+/* Sets the content at the bottom */
+.body-section .container .side-3 {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-end;
+}
+
+.body-section .container .side-3 > * {
+  padding: 0 0 0px 0;
+}
+
+.body-section .container .side-3 img {
+  max-width: 0%;
+  display: flex;
+  order: -1;
 }
