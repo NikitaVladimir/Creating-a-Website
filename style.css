@@ -140,7 +140,7 @@ nav ul li a{
   
   .main-container{
     height: auto;
-  }
+}
   
   .child-container{
     flex-direction: column-reverse;
@@ -149,6 +149,7 @@ nav ul li a{
   }
 
   .child-container > *{
+    
     padding: 0.25em 0px 0.5em 0px;
     flex-basis: 100%;
   }
@@ -168,61 +169,197 @@ nav ul li a{
   }
 }
 
-
-
-
 /* BODY SECTION */
 
 .body-section{
-  font-size: 16px;
-  background-color: darkslategray;
   height: 100vh;
-  overflow: hidden;
-  display: flex;
+  font-size: 1em;
+  background-color: darkslategray;
+  display: flex; 
+  flex-wrap: wrap;
 }
 
-.body-section .container{
-  width: var(--containerwidth-width);
-  margin: auto;
-  background-color: red;
+.header-section{
+  font-size: 1.2em;
+  padding: 3em;
+}
+
+.body-section > *{
+  width: calc(var(--containerwidth-width) + 2em);
+  margin: 2em auto 2em auto;
   display: flex;
+  gap: 1em;
 }
 
 .body-section .container > *{
-/*  padding: 2em; */
   flex-basis: 100%;
-  padding: 2em 2em;
+  padding: 0 1em;
+  overflow: hidden;
 }
 
-/* Content with space between elements */
-.body-section .container .side-1 {
-  background-color:blue;
+.body-section .container > * h1{
+    padding-bottom: 0.5em;
+  }
+
+
+@media screen and (max-width: 1080px){
+
+  .body-section .container{
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+  }
+
+  .body-section .container > * h1{
+    padding: 0.5em 0;
+  }
+
+  .header-section{
+    font-size: 1.1em;
+    padding: 2em;
+}
+
+}
+@media screen and (max-width: 768px){
+  .body-section {
+    font-size: 0.9em;
+  }
+
+  .body-section .container{
+    width: calc(var(--mobilecontainerwidth-width) + 2em);
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+}
+
+
+
+
+/* Layout */
+.slider{
+  height: 100vh;
+  background-color: darkblue;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center; 
+  
+}
+
+.disabled-card-previous{
+  display: flex;
+  height: 300px;
+  width: 200px;
+  background: url(red-painting.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+.text-wrapper{
+  height: 100%;
+  width: 80px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(53, 53, 53);  
+}
+
+.disabled-card-previous p{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+
+  color: rgb(167, 167, 167)
+}
+
+.disabled-card-previous h1{
+  flex: 3;
+  writing-mode: vertical-rl;
+  font-size: 1.1em;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  align-self: center;
+  transform: rotate(180deg);
+  padding-top: 1.5em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+.disabled-card-previous{
+
+  cursor: pointer;
+  height: 350px;
+  width: 200px;
+  background-image: url(red-painting.jpg);
+  background-size: cover;
+  transition: 0.20s ease-out;
+
+  box-shadow: 2px 2px 5px darkblue;
+}
+
+.disabled-card-previous:hover{
+  height: 450px;
+  width: 300px;
+  box-shadow: 4px 4px 7px darkblue;
+}
+
+.disabled-card-previous .text-wrapper{
+  height: 100%;
   display: flex;
   flex-wrap: wrap;
-  align-content: space-between;
+  background-color: rgb(52, 52, 63);
+  width: 80px;
 }
 
-/* Content with elements in the middle */
-.body-section .container .side-2 {
+.text-wrapper p{
+  font-size: 1.1em;
+  flex-basis: 100%;
   display: flex;
-  flex-wrap: wrap;
-  background-color: green;
-  align-content: center;
+  justify-content: center;
+  align-self: center;
+  color: rgb(173, 172, 172);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-/* Sets the content at the bottom */
-.body-section .container .side-3 {
+.text-wrapper > h1{
+
+  position: relative;
+  font-size: 1.3em;
+  padding-top: 20px;
+  flex-basis: 100%;
   display: flex;
-  flex-wrap: wrap;
-  align-content: flex-end;
+  justify-content: center;
+  align-self: flex-start;
+  color: red;
 }
 
-.body-section .container .side-3 > * {
-  padding: 0 0 0px 0;
-}
-
-.body-section .container .side-3 img {
-  max-width: 0%;
+.text-wrapper h1{
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
   display: flex;
-  order: -1;
+  align-items: center;
+  
 }
+ */
+
