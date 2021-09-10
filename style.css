@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@300;400&display=swap');
 
 :root{
   --primary-font-color: #fff2a0;
@@ -40,7 +41,7 @@ header{
   min-height: 100vh;
   width: 100%;
   background: linear-gradient(rgba(0, 0, 0, 0.8),
-  rgba(0, 0, 0, 0.8)), url(milano-gallery.jpg) no-repeat center center fixed;
+  rgba(0, 0, 0, 0.8)), url(images/milano-gallery.jpg) no-repeat center center fixed;
   background-size: cover;
 }
 
@@ -174,7 +175,7 @@ nav ul li a{
 .body-section{
   height: 100vh;
   font-size: 1em;
-  background-color: darkslategray;
+  background-color: rgb(34, 34, 34);
   display: flex; 
   flex-wrap: wrap;
 }
@@ -241,55 +242,133 @@ nav ul li a{
 /* Layout */
 .slider{
   height: 100vh;
-  background-color: darkblue;
+  background-color: rgb(34, 34, 34);
   display: flex;
   width: 100%;
   justify-content: space-between;
   align-items: center; 
-  
 }
+
+/* PREVIOUS CARD LAYOUT & STYLING */
 
 .disabled-card-previous{
   display: flex;
-  height: 300px;
+  height: 355px;
   width: 200px;
-  background: url(red-painting.jpg) no-repeat center center;
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(images/greek-statue1.jpg) no-repeat left center;
   background-size: cover;
+  cursor: pointer;
 }
 
-.text-wrapper{
+.disabled-card-previous .text-wrapper{
   height: 100%;
   width: 80px;
   display: flex;
   flex-direction: column;
-  background-color: rgb(53, 53, 53);  
+  background-color: #303030;  
+  box-shadow: -5px 0px 55px -15px; 
 }
 
 .disabled-card-previous p{
+  min-height: 60px;
+  padding-top: 27px;
+  padding-bottom: 60px;
+  font-size: 1.15em;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #666666;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex: 1;
-
-  color: rgb(167, 167, 167)
 }
 
-.disabled-card-previous h1{
-  flex: 3;
+.disabled-card-previous h3{
+  height: 100%;
   writing-mode: vertical-rl;
-  font-size: 1.1em;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 1.275em;
+  font-family:'Josefin Slab', serif;
+  font-weight: 400;
+  color: #ffffff;
   align-self: center;
   transform: rotate(180deg);
   padding-top: 1.5em;
+  line-height: 0.9em;
+  transition: 0.5s ease;
+}
+
+/* Stylish ilne between Date and H3 Title */
+.disabled-card-previous p:before{  
+  position: absolute;
+  content: "";
+  height: 30px;
+  width: 1px;
+  background-color: white;
+  margin-top: 112px;
+
+  display: flex;
+  align-items: center;
+  justify-items: center;
 }
 
 
+/* NEXT CARD LAYOUT & STYLING */
+
+.disabled-card-next{
+  height: 355px;
+  width: 200px;
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(images/museum-art.jpg) no-repeat right center;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.disabled-card-next .text-wrapper{
+  height: 100%;
+  width: 80px;
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: #303030;  
+  box-shadow: 5px 0px 55px -15px; 
+}
 
 
+.disabled-card-next p{
+  min-height: 60px;
+  padding-top: 27px;
+  padding-bottom: 60px;
+  font-size: 1.15em;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #666666;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.disabled-card-next h3{
+  height: 100%;
+  writing-mode: vertical-rl;
+  font-size: 1.35em;
+  font-family:'Josefin Slab', serif;
+  font-weight: 400;
+  color: #ffffff;
+  align-self: center;
+  padding-top: 1.5em;
+  line-height: 0.9em;
+  transition: 0.5s ease;
+}
 
+/* Stylish ilne between Date and H3 Title */
+.disabled-card-next p:before{  
+  position: absolute;
+  content: "";
+  height: 30px;
+  width: 1px;
+  background-color: white;
+  margin-top: 112px;
 
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
 
 
 
