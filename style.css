@@ -237,16 +237,80 @@ nav ul li a{
 }
 
 
+.slider-wrapper{
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
 
+.text-container{
+  position: relative;
+  padding: 0 200px;
+  height: 160px;
+  margin-bottom: -10px;
+}
+.text-container::after{
+  z-index: 2;
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  left: 0;
+  top: 85%;
+  background-color: white;
+}
+.text-container h2, .text-container p{
+  padding-left: 70px;
+  z-index: 3;
+  position: absolute;
+}
+.text-container h2{
+  padding-top: 100px;
+  color: #f98b5f;
+  font-size: 3.75em;
+  letter-spacing: 1.5px;
+  word-spacing: 10px;
+  background-color: rgb(34, 34, 34);
+  width: calc(100% - 395px);
+  background-color: red;
+ 
+}
+.text-container p{
+  padding-top: 65px;
+  z-index: 4;
+  position: absolute;
+  margin-top: -20px;
+  color: #444444;
+  font-size: 1.275em;
+  text-transform: lowercase;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 
-/* Layout */
+.column-wrapper{
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.card-wrapper{
+  position: relative;
+  margin-top: 20px;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* SLIDER LAYOUT */
 .slider{
   height: 100vh;
   background-color: rgb(34, 34, 34);
   display: flex;
   width: 100%;
   justify-content: space-between;
-  align-items: center; 
 }
 
 /* PREVIOUS CARD LAYOUT & STYLING */
@@ -254,7 +318,8 @@ nav ul li a{
 .disabled-card-previous{
   display: flex;
   height: 355px;
-  width: 200px;
+  
+  min-width: 200px;
   background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(images/greek-statue1.jpg) no-repeat left center;
   background-size: cover;
   cursor: pointer;
@@ -271,7 +336,7 @@ nav ul li a{
 
 .disabled-card-previous p{
   min-height: 60px;
-  padding-top: 27px;
+  padding-top: 25px;
   padding-bottom: 60px;
   font-size: 1.15em;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -314,7 +379,7 @@ nav ul li a{
 
 .disabled-card-next{
   height: 355px;
-  width: 200px;
+  min-width: 195px;
   background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(images/museum-art.jpg) no-repeat right center;
   background-size: cover;
   cursor: pointer;
@@ -322,7 +387,7 @@ nav ul li a{
 
 .disabled-card-next .text-wrapper{
   height: 100%;
-  width: 80px;
+  width: 90px;
   margin-left: auto;
   display: flex;
   flex-direction: column;
@@ -333,7 +398,7 @@ nav ul li a{
 
 .disabled-card-next p{
   min-height: 60px;
-  padding-top: 27px;
+  padding-top: 25px;
   padding-bottom: 60px;
   font-size: 1.15em;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -371,74 +436,151 @@ nav ul li a{
 }
 
 
+/* ENABLED CARD */
 
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-.disabled-card-previous{
-
-  cursor: pointer;
-  height: 350px;
-  width: 200px;
-  background-image: url(red-painting.jpg);
-  background-size: cover;
-  transition: 0.20s ease-out;
-
-  box-shadow: 2px 2px 5px darkblue;
+.enabled-card{
+  width: 100%;
+  height: 670px;
+  display: flex;
+  padding-left: 70px;
+  padding-right: 80px;
+  margin-top: -5px;
+  z-index: 6;
 }
 
-.disabled-card-previous:hover{
-  height: 450px;
-  width: 300px;
-  box-shadow: 4px 4px 7px darkblue;
+.enabled-card-side-1{
+  flex: 1.0825;
+  margin-bottom: 40px;
 }
 
-.disabled-card-previous .text-wrapper{
+
+
+.enabled-card-side-2{
+  flex: 1;
+}
+
+.enabled-card-side-1 img{ 
+  min-width: 150px;
+  width: 100%;
   height: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  background-color: rgb(52, 52, 63);
-  width: 80px;
+  object-fit: cover;
+  padding-top: 70px; 
 }
 
-.text-wrapper p{
-  font-size: 1.1em;
-  flex-basis: 100%;
-  display: flex;
-  justify-content: center;
-  align-self: center;
-  color: rgb(173, 172, 172);
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+.enabled-card-text-wrapper{
+  background-color: rgb(39, 39, 39);
+  padding-top: 70px;
+  padding-left: 3.125em;
+  padding-right: 3.2em;
+  box-shadow: 0px 10px 40px -5px rgb(22, 22, 22);
+  height: 100%;
 }
 
-.text-wrapper > h1{
 
-  position: relative;
-  font-size: 1.3em;
-  padding-top: 20px;
-  flex-basis: 100%;
-  display: flex;
-  justify-content: center;
-  align-self: flex-start;
-  color: red;
-}
+@media screen and (max-width: 1525px){
 
-.text-wrapper h1{
-  writing-mode: vertical-rl;
-  transform: rotate(180deg);
-  display: flex;
-  align-items: center;
+  .enabled-card{
+    padding-left: 3vw;
+    padding-right: 3.5vw;
+    margin-top: -50px;
+    font-size: clamp(14px, 1vw, 1.2vw);
+    display: flex;
+    align-items: center;
+    }
+
+  .enabled-card-side-1 img{ 
+    display: block;
+    width: 100%;
+    min-height: 520px;
+  }
   
-}
- */
+  .enabled-card-side-1{
+    flex: 0.625;
+    margin-bottom: 4vw;
+  }
 
+  .enabled-card-side-1 img{ 
+    padding-top: 4vw; 
+  }
+
+  .enabled-card-text-wrapper{
+    padding-top: 4vw;
+    padding-left: clamp(25px,2vw, 3vw);
+    padding-right: clamp(25px,2vw, 3vw);
+  }
+}
+
+.enabled-card-text-wrapper h3{
+  font-size: 2.3em;
+  font-weight: 100;
+  color: #ffffff;
+  align-self: center;
+  padding-top: 1em;
+  padding-bottom: 0.575em;
+  line-height: 1.1em;
+  word-spacing: 5px;
+  letter-spacing: 1px;
+}
+
+.enabled-card-text-wrapper .paragraph-name{
+  font-size: 1.275em;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #777777;
+}
+
+.enabled-card-text-wrapper .paragraph-text{
+  font-size: 1.1em;
+  padding-top: 1em;
+  padding-bottom: 1.55em;
+  line-height: 1.725em;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #f7f7f7;
+}
+
+.enabled-card-text-wrapper i{
+  padding-right: 10px;
+  font-size: 0.8em;
+  align-self: center;
+}
+
+.enabled-card-text-wrapper .fa-calendar-alt{
+  padding-top: 3px;
+  padding-right: 12px;
+}
+
+.enabled-card-text-wrapper .time, .enabled-card-text-wrapper .date{
+  margin-top: 0.60em;
+  font-size: 1.3em;
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  align-self: center;
+}
+
+.enabled-card-text-wrapper button{
+  margin-top: 2.75em;
+  margin-bottom: 2.75em;
+  padding: 10px 35px 15px 36px;
+
+  color: #f98b5f;
+  background-color: transparent;
+  cursor: pointer;
+  border: 2px solid #f98b5f;
+
+  font-size: 1.25em;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 600;
+
+  transition: 0.25s ease;
+}
+
+.enabled-card-text-wrapper button:hover{
+  border: rgb(100, 100, 100) 2px solid;
+  background-color: orange;
+  color: black;
+}
+
+.pagination-slider{
+  font-size: 2em;
+  background-color: red;
+  align-self: center;
+}
