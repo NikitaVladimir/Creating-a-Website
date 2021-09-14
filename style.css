@@ -251,6 +251,7 @@ nav ul li a{
   padding: 0 200px;
   height: 160px;
   margin-bottom: -10px;
+  
 }
 .text-container::after{
   z-index: 2;
@@ -268,15 +269,14 @@ nav ul li a{
   position: absolute;
 }
 .text-container h2{
+  position: relative;
   padding-top: 100px;
   color: #f98b5f;
   font-size: 3.75em;
   letter-spacing: 1.5px;
   word-spacing: 10px;
   background-color: rgb(34, 34, 34);
-  width: calc(100% - 395px);
-  background-color: red;
- 
+  width: calc(100%);
 }
 .text-container p{
   padding-top: 65px;
@@ -581,6 +581,5 @@ nav ul li a{
 
 .pagination-slider{
   font-size: 2em;
-  background-color: red;
   align-self: center;
 }
