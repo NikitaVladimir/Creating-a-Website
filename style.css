@@ -328,6 +328,11 @@ nav ul li a{
   background-size: cover;
   cursor: pointer;
   margin-top: -60px;
+  transition: 0.5s;
+}
+
+.disabled-card-previous:hover{
+  box-shadow: 5px 0px 15px -5px;
 }
 
 .disabled-card-previous .text-wrapper{
@@ -389,6 +394,11 @@ nav ul li a{
   background-size: cover;
   cursor: pointer;
   margin-top: -60px;
+  transition: 0.5s;
+}
+
+.disabled-card-next:hover{
+ box-shadow: -5px -0px 15px -5px;
 }
 
 .disabled-card-next .text-wrapper{
@@ -779,8 +789,8 @@ nav ul li a{
   display: flex;
 }
 
-
 @media screen and (max-width: 1525px){
+
   .information-container{
     margin: 100px auto auto auto;
   }
@@ -790,18 +800,21 @@ nav ul li a{
     width: 80%;
     padding: 40px 0px;
   } 
+
   .container-wrapper p{
     color:#f98b5f;
     font-size: 1.3em;
     text-align: center;
   }
+
   .container-wrapper img{
     width: 80%;
     margin: auto;
   }
-}
 
+}
 @media screen and (max-width: 768px){
+
   .information-container{
     margin: 60px auto auto auto;
   }
@@ -815,8 +828,11 @@ nav ul li a{
     font-size: 1.25em;
     text-align: center;
   }
+
   .container-wrapper img{
     width: 60%;
     margin: auto;
   }
+
 }
+
